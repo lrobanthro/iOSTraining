@@ -15,6 +15,8 @@
 		A7EBD2AE1BF4D5480094E0F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7EBD2AC1BF4D5480094E0F1 /* LaunchScreen.storyboard */; };
 		A7EBD2B91BF4D5480094E0F1 /* iOS_TrainingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EBD2B81BF4D5480094E0F1 /* iOS_TrainingTests.m */; };
 		A7EBD2C41BF4D5480094E0F1 /* iOS_TrainingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EBD2C31BF4D5480094E0F1 /* iOS_TrainingUITests.m */; };
+		A7FF131E1C0CCCB300986275 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FF131B1C0CCCB300986275 /* Car.m */; };
+		A7FF131F1C0CCCB300986275 /* Vehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FF131D1C0CCCB300986275 /* Vehicle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		A7EBD2BF1BF4D5480094E0F1 /* iOS TrainingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS TrainingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7EBD2C31BF4D5480094E0F1 /* iOS_TrainingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_TrainingUITests.m; sourceTree = "<group>"; };
 		A7EBD2C51BF4D5480094E0F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7FF131A1C0CCCB300986275 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		A7FF131B1C0CCCB300986275 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		A7FF131C1C0CCCB300986275 /* Vehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vehicle.h; sourceTree = "<group>"; };
+		A7FF131D1C0CCCB300986275 /* Vehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vehicle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,10 @@
 				A7EBD2A21BF4D5480094E0F1 /* AppDelegate.m */,
 				A7EBD2A41BF4D5480094E0F1 /* ViewController.h */,
 				A7EBD2A51BF4D5480094E0F1 /* ViewController.m */,
+				A7FF131A1C0CCCB300986275 /* Car.h */,
+				A7FF131B1C0CCCB300986275 /* Car.m */,
+				A7FF131C1C0CCCB300986275 /* Vehicle.h */,
+				A7FF131D1C0CCCB300986275 /* Vehicle.m */,
 				A7EBD2A71BF4D5480094E0F1 /* Main.storyboard */,
 				A7EBD2AA1BF4D5480094E0F1 /* Assets.xcassets */,
 				A7EBD2AC1BF4D5480094E0F1 /* LaunchScreen.storyboard */,
@@ -272,7 +282,9 @@
 			files = (
 				A7EBD2A61BF4D5480094E0F1 /* ViewController.m in Sources */,
 				A7EBD2A31BF4D5480094E0F1 /* AppDelegate.m in Sources */,
+				A7FF131E1C0CCCB300986275 /* Car.m in Sources */,
 				A7EBD2A01BF4D5480094E0F1 /* main.m in Sources */,
+				A7FF131F1C0CCCB300986275 /* Vehicle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +510,7 @@
 				A7EBD2CA1BF4D5480094E0F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7EBD2CB1BF4D5480094E0F1 /* Build configuration list for PBXNativeTarget "iOS TrainingTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +519,7 @@
 				A7EBD2CD1BF4D5480094E0F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7EBD2CE1BF4D5480094E0F1 /* Build configuration list for PBXNativeTarget "iOS TrainingUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +528,7 @@
 				A7EBD2D01BF4D5480094E0F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
