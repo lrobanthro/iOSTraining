@@ -17,6 +17,8 @@
 		A7EBD2C41BF4D5480094E0F1 /* iOS_TrainingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EBD2C31BF4D5480094E0F1 /* iOS_TrainingUITests.m */; };
 		A7FF131E1C0CCCB300986275 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FF131B1C0CCCB300986275 /* Car.m */; };
 		A7FF131F1C0CCCB300986275 /* Vehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FF131D1C0CCCB300986275 /* Vehicle.m */; };
+		A7FF13221C0CCDCF00986275 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FF13211C0CCDCF00986275 /* Game.m */; };
+		A7FF13251C0CCFBB00986275 /* BoardGame.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FF13241C0CCFBB00986275 /* BoardGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,10 @@
 		A7FF131B1C0CCCB300986275 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		A7FF131C1C0CCCB300986275 /* Vehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vehicle.h; sourceTree = "<group>"; };
 		A7FF131D1C0CCCB300986275 /* Vehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vehicle.m; sourceTree = "<group>"; };
+		A7FF13201C0CCDCF00986275 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		A7FF13211C0CCDCF00986275 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		A7FF13231C0CCFBB00986275 /* BoardGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardGame.h; sourceTree = "<group>"; };
+		A7FF13241C0CCFBB00986275 /* BoardGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,10 @@
 				A7FF131B1C0CCCB300986275 /* Car.m */,
 				A7FF131C1C0CCCB300986275 /* Vehicle.h */,
 				A7FF131D1C0CCCB300986275 /* Vehicle.m */,
+				A7FF13201C0CCDCF00986275 /* Game.h */,
+				A7FF13211C0CCDCF00986275 /* Game.m */,
+				A7FF13231C0CCFBB00986275 /* BoardGame.h */,
+				A7FF13241C0CCFBB00986275 /* BoardGame.m */,
 				A7EBD2A71BF4D5480094E0F1 /* Main.storyboard */,
 				A7EBD2AA1BF4D5480094E0F1 /* Assets.xcassets */,
 				A7EBD2AC1BF4D5480094E0F1 /* LaunchScreen.storyboard */,
@@ -281,8 +291,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7EBD2A61BF4D5480094E0F1 /* ViewController.m in Sources */,
+				A7FF13251C0CCFBB00986275 /* BoardGame.m in Sources */,
 				A7EBD2A31BF4D5480094E0F1 /* AppDelegate.m in Sources */,
 				A7FF131E1C0CCCB300986275 /* Car.m in Sources */,
+				A7FF13221C0CCDCF00986275 /* Game.m in Sources */,
 				A7EBD2A01BF4D5480094E0F1 /* main.m in Sources */,
 				A7FF131F1C0CCCB300986275 /* Vehicle.m in Sources */,
 			);
