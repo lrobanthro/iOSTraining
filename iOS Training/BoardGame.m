@@ -11,6 +11,7 @@
 @implementation BoardGame
 
 - (void)setupGameValues {
+    [super setupGameValues];
     self.gameType = @"Board Game";
     self.gameName = @"Ticket to Ride";
     self.ageGroup = @"10+";
@@ -20,7 +21,6 @@
     self.price = 29.99;
     
     self.purchased = YES;
-    self.missingPieces = NO;
 }
 
 @end
