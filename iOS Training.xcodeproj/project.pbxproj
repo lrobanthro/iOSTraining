@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A771DAB51C3EACB6003D90BA /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A771DAB41C3EACB6003D90BA /* SwiftViewController.swift */; };
 		A7EBD2A01BF4D5480094E0F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EBD29F1BF4D5480094E0F1 /* main.m */; };
 		A7EBD2A31BF4D5480094E0F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EBD2A21BF4D5480094E0F1 /* AppDelegate.m */; };
 		A7EBD2A61BF4D5480094E0F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EBD2A51BF4D5480094E0F1 /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A771DAB31C3EACB6003D90BA /* iOS Training-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS Training-Bridging-Header.h"; sourceTree = "<group>"; };
+		A771DAB41C3EACB6003D90BA /* SwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		A7EBD29B1BF4D5480094E0F1 /* iOS Training.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Training.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7EBD29F1BF4D5480094E0F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A7EBD2A11BF4D5480094E0F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +81,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A771DAB11C3EABA9003D90BA /* Obj-CUI */ = {
+			isa = PBXGroup;
+			children = (
+				A7EBD2A41BF4D5480094E0F1 /* ViewController.h */,
+				A7EBD2A51BF4D5480094E0F1 /* ViewController.m */,
+			);
+			name = "Obj-CUI";
+			sourceTree = "<group>";
+		};
+		A771DAB21C3EABC9003D90BA /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				A771DAB41C3EACB6003D90BA /* SwiftViewController.swift */,
+				A771DAB31C3EACB6003D90BA /* iOS Training-Bridging-Header.h */,
+			);
+			name = SwiftUI;
+			sourceTree = "<group>";
+		};
 		A7EBD2921BF4D5480094E0F1 = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +122,10 @@
 		A7EBD29D1BF4D5480094E0F1 /* iOS Training */ = {
 			isa = PBXGroup;
 			children = (
+				A771DAB21C3EABC9003D90BA /* SwiftUI */,
+				A771DAB11C3EABA9003D90BA /* Obj-CUI */,
 				A7EBD2A11BF4D5480094E0F1 /* AppDelegate.h */,
 				A7EBD2A21BF4D5480094E0F1 /* AppDelegate.m */,
-				A7EBD2A41BF4D5480094E0F1 /* ViewController.h */,
-				A7EBD2A51BF4D5480094E0F1 /* ViewController.m */,
 				A7EBD2A71BF4D5480094E0F1 /* Main.storyboard */,
 				A7EBD2AA1BF4D5480094E0F1 /* Assets.xcassets */,
 				A7EBD2AC1BF4D5480094E0F1 /* LaunchScreen.storyboard */,
@@ -202,6 +223,7 @@
 		A7EBD2931BF4D5480094E0F1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = URBN;
 				TargetAttributes = {
@@ -270,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A771DAB51C3EACB6003D90BA /* SwiftViewController.swift in Sources */,
 				A7EBD2A61BF4D5480094E0F1 /* ViewController.m in Sources */,
 				A7EBD2A31BF4D5480094E0F1 /* AppDelegate.m in Sources */,
 				A7EBD2A01BF4D5480094E0F1 /* main.m in Sources */,
@@ -413,10 +436,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "iOS Training/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.urbn.iOS-Training";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS Training/iOS Training-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -424,10 +450,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "iOS Training/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.urbn.iOS-Training";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS Training/iOS Training-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -498,6 +526,7 @@
 				A7EBD2CA1BF4D5480094E0F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7EBD2CB1BF4D5480094E0F1 /* Build configuration list for PBXNativeTarget "iOS TrainingTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +535,7 @@
 				A7EBD2CD1BF4D5480094E0F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7EBD2CE1BF4D5480094E0F1 /* Build configuration list for PBXNativeTarget "iOS TrainingUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +544,7 @@
 				A7EBD2D01BF4D5480094E0F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
