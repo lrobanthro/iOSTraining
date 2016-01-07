@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "iOS_Training-Swift.h"
 
 @interface ViewController ()
 
