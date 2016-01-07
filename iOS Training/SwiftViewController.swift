@@ -12,6 +12,7 @@ class SwiftViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.redColor();
 
         // Do any additional setup after loading the view.
     }

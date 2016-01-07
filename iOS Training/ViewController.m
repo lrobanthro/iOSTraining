@@ -64,6 +64,7 @@
     [btn2 addTarget:self action:@selector(buttonTouched:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *btn3 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    
     [btn3 setTitle:@"Fortune #3" forState:UIControlStateNormal];
     [btn3 setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     btn3.layer.cornerRadius = 3;
@@ -79,7 +80,12 @@
     
     btn3.center = CGPointMake(btn1.center.x, CGRectGetMaxY(btn2.frame) + 50);
     [self.view addSubview:btn3];
-    [btn3 addTarget:self action:@selector(buttonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    [btn3 addTarget:self action:@selector(buttonSwiftTouched:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)buttonSwiftTouched:(id)sender {
+    UIViewController * swiftViewController = [SwiftViewController new];
+    [self.navigationController pushViewController:swiftViewController animated:YES];
 }
 
 - (void)buttonTouched:(id)sender {
