@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.lbl = [[UILabel alloc] initWithFrame:CGRectMake(10, 50, 400, 20)];
+    self.lbl = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 400, 20)];
     self.lbl.textColor = [UIColor grayColor];
     self.lbl.numberOfLines = 0;
     self.lbl.lineBreakMode = NSLineBreakByWordWrapping;
@@ -80,12 +80,34 @@
     
     btn3.center = CGPointMake(btn1.center.x, CGRectGetMaxY(btn2.frame) + 50);
     [self.view addSubview:btn3];
-    [btn3 addTarget:self action:@selector(buttonSwiftTouched:) forControlEvents:UIControlEventTouchUpInside];
+    [btn3 addTarget:self action:@selector(buttonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    UIButton *btn4 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    
+    [btn4 setTitle:@"Swift Version" forState:UIControlStateNormal];
+    [btn4 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    btn4.layer.cornerRadius = 3;
+    btn4.layer.borderWidth = 1;
+    btn4.layer.borderColor = [UIColor blackColor].CGColor;
+    [btn4 sizeToFit];
+    
+    CGRect frame4 = btn4.frame;
+    frame4.size.width = frame3.size.width + 20.0;
+    frame4.size.height = frame3.size.height + 20.0;
+    btn4.frame = frame4;
+    
+    btn4.frame = CGRectMake(300, 50, 100, 20);
+    [self.view addSubview:btn4];
+    [btn4 addTarget:self action:@selector(buttonSwiftTouched:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)buttonSwiftTouched:(id)sender {
     UIViewController * swiftViewController = [SwiftViewController new];
     [self.navigationController pushViewController:swiftViewController animated:YES];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:swiftViewController];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)buttonTouched:(id)sender {
