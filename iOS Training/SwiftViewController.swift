@@ -8,7 +8,7 @@
 
 import UIKit
 
-let lbl = UILabel(frame: CGRectMake(10, 100, 400, 20))
+let lbl = UILabel(frame: CGRectMake(10, 125, 400, 20))
 
 class SwiftViewController: UIViewController {
 
@@ -60,7 +60,18 @@ class SwiftViewController: UIViewController {
         
         self.view.addSubview(btn3)
         
+        let btn4 = UIButton(type: UIButtonType.RoundedRect)
         
+        btn4.setTitle("Obj-C Version", forState: UIControlState.Normal)
+        btn4.center = CGPointMake(300, 70)
+        btn4.layer.cornerRadius = 3
+        btn4.layer.borderWidth = 1
+        btn4.layer.borderColor = UIColor.blackColor().CGColor
+        btn4.sizeToFit()
+        btn4.addTarget(self, action:"buttonObjCTouched:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        self.view.addSubview(btn4)
+    
         // Do any additional setup after loading the view.
     }
     
@@ -73,6 +84,10 @@ class SwiftViewController: UIViewController {
         frame.size.width = 400.0
         lbl.frame = frame;
         lbl.sizeToFit()
+    }
+    
+    func buttonObjCTouched(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
