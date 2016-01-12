@@ -8,7 +8,7 @@
 
 import UIKit
 
-let lbl = UILabel(frame: CGRectMake(10, 125, 400, 20))
+let lbl = UILabel(frame: CGRectMake(10, 250, 400, 20))
 
 class SwiftViewController: UIViewController {
 
@@ -21,81 +21,118 @@ class SwiftViewController: UIViewController {
         self.view.addSubview(lbl)
         view.backgroundColor = UIColor.lightGrayColor()
         
-        let btn1 = UIButton(type: UIButtonType.RoundedRect)
+        let btn1 = UIButton(type: .RoundedRect)
     
         btn1.setTitle("Fortune #1", forState: UIControlState.Normal)
-        btn1.layer.cornerRadius = 3
-        btn1.layer.borderWidth = 1
-        btn1.layer.borderColor = UIColor.blueColor().CGColor
+        setButtonBorder(btn1, colorName: UIColor.blueColor())
         btn1.tag = 0
         btn1.sizeToFit()
         
+        sizeButtonFrame(btn1)
+        
         btn1.center = self.view.center;
-        btn1.addTarget(self, action:"buttonTouched:", forControlEvents: UIControlEvents.TouchUpInside)
+        btn1.addTarget(self, action:"buttonTouched:", forControlEvents: .TouchUpInside)
         self.view.addSubview(btn1)
         
         let btn2 = UIButton(type: UIButtonType.RoundedRect)
         
-        btn2.setTitle("Fortune #2", forState: UIControlState.Normal)
+        btn2.setTitle("Fortune #2", forState: .Normal)
         btn2.center = CGPointMake(CGRectGetMinX(btn1.frame), CGRectGetMaxY(btn1.frame) + 50)
-        btn2.layer.cornerRadius = 3
-        btn2.layer.borderWidth = 1
-        btn2.layer.borderColor = UIColor.redColor().CGColor
+        setButtonBorder(btn2, colorName: UIColor.redColor())
         btn2.tag = 1
         btn2.sizeToFit()
-        btn2.addTarget(self, action:"buttonTouched:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        sizeButtonFrame(btn2)
+        
+        btn2.addTarget(self, action:"buttonTouched:", forControlEvents: .TouchUpInside)
         
         self.view.addSubview(btn2)
         
         let btn3 = UIButton(type: UIButtonType.RoundedRect)
         
-        btn3.setTitle("Fortune #3", forState: UIControlState.Normal)
+        btn3.setTitle("Fortune #3", forState: .Normal)
         btn3.center = CGPointMake(CGRectGetMinX(btn1.frame), CGRectGetMaxY(btn2.frame) + 50)
-        btn3.layer.cornerRadius = 3
-        btn3.layer.borderWidth = 1
-        btn3.layer.borderColor = UIColor.whiteColor().CGColor
+        setButtonBorder(btn3, colorName: UIColor.whiteColor())
         btn3.tag = 2
         btn3.sizeToFit()
-        btn3.addTarget(self, action:"buttonTouched:", forControlEvents: UIControlEvents.TouchUpInside)
+        sizeButtonFrame(btn3)
+        btn3.addTarget(self, action:"buttonTouched:", forControlEvents: .TouchUpInside)
         
         self.view.addSubview(btn3)
         
-        let btn4 = UIButton(type: UIButtonType.RoundedRect)
+        let btn4 = UIButton(type: .RoundedRect)
         
-        btn4.setTitle("Obj-C Version", forState: UIControlState.Normal)
-        btn4.center = CGPointMake(300, 70)
-        btn4.layer.cornerRadius = 3
-        btn4.layer.borderWidth = 1
-        btn4.layer.borderColor = UIColor.blackColor().CGColor
+        btn4.setTitle("Dimiss Modal", forState: .Normal)
+        btn4.center = CGPointMake(275, 70)
+        setButtonBorder(btn4, colorName: UIColor.blackColor())
         btn4.sizeToFit()
-        btn4.addTarget(self, action:"buttonObjCTouched:", forControlEvents: UIControlEvents.TouchUpInside)
+        sizeButtonFrame(btn4)
+        btn4.addTarget(self, action:"dismissButtonTouched:", forControlEvents: .TouchUpInside)
         
         self.view.addSubview(btn4)
+        
+        let btn5 = UIButton(type: .RoundedRect)
+        
+        btn5.setTitle("Push to Obj-C", forState: .Normal)
+        btn5.center = CGPointMake(275, 150)
+        setButtonBorder(btn5, colorName: UIColor.blackColor())
+        btn5.sizeToFit()
+        sizeButtonFrame(btn5)
+        btn5.addTarget(self, action: "pushObjC:", forControlEvents: .TouchUpInside)
+        
+        self.view.addSubview(btn5)
     
         // Do any additional setup after loading the view.
     }
     
     func buttonTouched(sender: UIButton) {
-        let btnText = sender.titleLabel?.text
+        //let btnText = sender.titleLabel?.text
         
         let fortunes = [" Take advantage of an upcoming opportunity - make this really long so that it's more than 1 or 2 lines", " Never quit!", " Tomorrow is another day"];
-        lbl.text = btnText! + fortunes[sender.tag]
+        if let btnText = sender.titleLabel?.text {
+            lbl.text = btnText + fortunes[sender.tag]
+        } else {
+            lbl.text = fortunes[sender.tag]
+        }
+        
         var frame = lbl.frame
         frame.size.width = 400.0
         lbl.frame = frame;
         lbl.sizeToFit()
+        
+        self.view.addSubview(lbl)
     }
     
-    func buttonObjCTouched(sender: UIButton) {
+    func dismissButtonTouched(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    func pushObjC(sender: UIButton) {
+        let vc = ViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func sizeButtonFrame(btn: UIButton) {
+        var frame = btn.frame
+        frame.size.width += 20.0
+        frame.size.height += 20.0
+        btn.frame = frame
+    }
+    
+    func setButtonBorder(btn: UIButton, colorName: UIColor) {
+        btn.layer.cornerRadius = 3
+        btn.layer.borderWidth = 1
+        btn.layer.borderColor = colorName.CGColor
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
 
