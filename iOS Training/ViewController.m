@@ -23,6 +23,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.lbl = [[UILabel alloc] initWithFrame:CGRectMake(10, 150, 400, 20)];
+    self.lbl.accessibilityIdentifier = @"Fortune Label";
     self.lbl.textColor = [UIColor grayColor];
     self.lbl.numberOfLines = 0;
     self.lbl.lineBreakMode = NSLineBreakByWordWrapping;

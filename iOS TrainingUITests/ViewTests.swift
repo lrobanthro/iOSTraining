@@ -31,18 +31,18 @@ class ViewTests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let i = 2
-        XCTAssert(i == 3)
-//        let app = XCUIApplication()
-//        let button1 = app.buttons.elementMatchingType(.Button, identifier: "Button1")
-//        XCTAssert(button1.exists)
-//        //button1.tap()
-//        //let buttonFake = app.buttons["No Fortune"]
-//        XCTAssertFalse(button1.exists)
-//        app.staticTexts["Fortune #1: Take advantage of an upcoming opportunity - make this really long so that it's more than 1 or 2 lines"].tap()
-//        app.buttons["Fortune #2"].tap()
-//        app.staticTexts["Fortune #2: Never quit!"].tap()
+
+        let app = XCUIApplication()
         
+        let label = app.staticTexts.elementMatchingType(.Any, identifier: "Fortune Label").label
+        XCTAssert(label == "Click any of the buttons below for your fortune")
+        
+        let button1 = app.buttons.elementMatchingType(.Button, identifier: "Button1")
+        button1.tap()
+        
+        let label2 = app.staticTexts.elementMatchingType(.Any, identifier: "Fortune Label").label
+        XCTAssert(label2 == "Fortune #1: Take advantage of an upcoming opportunity - make this really long so that it's more than 1 or 2 lines")
+    
     }
     
 }
