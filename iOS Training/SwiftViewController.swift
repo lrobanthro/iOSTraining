@@ -119,7 +119,7 @@ class SwiftViewController: UIViewController {
         btn.frame = frame
     }
     
-    func setButtonBorder(btn: UIButton, colorName: UIColor) {
+    private func setButtonBorder(btn: UIButton, colorName: UIColor) {
         btn.layer.cornerRadius = 3
         btn.layer.borderWidth = 1
         btn.layer.borderColor = colorName.CGColor

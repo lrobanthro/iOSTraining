@@ -105,7 +105,7 @@
 }
 
 - (void)buttonSwiftTouched:(id)sender {
-    UIViewController * swiftViewController = [SwiftViewController new];
+    SwiftViewController * swiftViewController = [SwiftViewController new];
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:swiftViewController];
     [self presentViewController:nav animated:YES completion:nil];
