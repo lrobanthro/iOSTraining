@@ -28,6 +28,7 @@
     self.lbl.lineBreakMode = NSLineBreakByWordWrapping;
     [self.view addSubview:self.lbl];
     self.lbl.text = @"Click any of the buttons below for your fortune";
+    self.lbl.accessibilityIdentifier = @"yeo";
     [self.lbl sizeToFit];
     
     UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -36,6 +37,7 @@
     btn1.layer.borderWidth = 1;
     btn1.layer.borderColor = [UIColor blueColor].CGColor;
     btn1.tag = 0;
+    btn1.accessibilityIdentifier = @"btn";
     [btn1 sizeToFit];
     
     CGRect frame = btn1.frame;
