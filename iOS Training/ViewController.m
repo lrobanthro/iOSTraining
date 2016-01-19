@@ -31,6 +31,7 @@
     [self.lbl sizeToFit];
     
     UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    btn1.accessibilityIdentifier = @"Button1";
     [btn1 setTitle:@"Fortune #1" forState:UIControlStateNormal];
     btn1.layer.cornerRadius = 3;
     btn1.layer.borderWidth = 1;
